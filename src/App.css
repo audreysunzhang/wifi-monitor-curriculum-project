@@ -1,38 +1,60 @@
+/* src/App.css */
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
+  padding: 20px;
   background-color: #282c34;
-  min-height: 100vh;
+  color: white;
+  font-size: calc(10px + 2vmin);
+}
+
+.App-content {
   display: flex;
-  flex-direction: column;
+  height: calc(100vh - 80px); 
+}
+
+.submissionComponents {
+  flex: 1;
+  padding: 20px;
+  background-color: #f1f1f1;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.Map-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.Map-container > div {
+  height: 100%;
+  width: 100%;
+}
+
+
+.neon-rainbow {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(90deg, #ff0000, #ff9900, #ffff00, #00ff00, #00ffff, #0000ff, #ff00ff, #ff0000);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: rainbowFlow 10s linear infinite;
+  background-size: 300% 300%; 
+}
+
+@keyframes rainbowFlow {
+  0% {
+    background-position: 0% 50%;
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    background-position: 100% 50%;
   }
 }

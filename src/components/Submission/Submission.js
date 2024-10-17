@@ -1,9 +1,9 @@
 import Calendar from "./Calendar";
-import WifiRating from "./wifiRating";
 import Location from "./Location"
 import SubButton from "./SubButton"
+import WifiRating from "./WifiRating";
 
-export default function LeftSide() {
+export default function Submission() {
   // Your component logic here
   return (
     <div class = "leftwrapper">

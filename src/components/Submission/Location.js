@@ -4,21 +4,30 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
+
 export default function Location() {
-  return(
-    <FormControl fullWidth>
-        <InputLabel id="demo-simple-select-label">Age</InputLabel>
+  const [loc, setLoc] = React.useState('');
+
+  const handleChange = (event) => {
+    setLoc(event.target.value);
+  };
+
+  return (
+    <Box sx={{ minWidth: 120 }}>
+      <FormControl fullWidth>
+        <InputLabel id="demo-simple-select-label">Location</InputLabel>
         <Select
-                labelId="demo-simple-select-label"
-                id="demo-simple-select"
-                value={age}
-                label="Age"
-                onChange={handleChange}
+          labelId="demo-simple-select-label"
+          id="demo-simple-select"
+          value={loc}
+          label="Location"
+          onChange={handleChange}
         >
-            <MenuItem value={10}>Ten</MenuItem>
-            <MenuItem value={20}>Twenty</MenuItem>
-            <MenuItem value={30}>Thirty</MenuItem>
+          <MenuItem value={'East Asian Library'}>East Asian Library</MenuItem>
+          <MenuItem value={'Doe Library'}>Doe Library</MenuItem>
+          <MenuItem value={'ASUC Student Union: Martin Luther King Jr. Building'}>ASUC Student Union: Martin Luther King Jr. Building</MenuItem>
         </Select>
-    </FormControl>
+      </FormControl>
+    </Box>
   );
-  }
+}

@@ -4,21 +4,30 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
-export default function Location() {
-  return(
-    <FormControl fullWidth>
-        <InputLabel id="demo-simple-select-label">Age</InputLabel>
+
+export default function WifiRating() {
+  const [rating, setRating] = React.useState('');
+
+  const handleChange = (event) => {
+    setRating(event.target.value);
+  };
+
+  return (
+    <Box sx={{ minWidth: 120 }}>
+      <FormControl fullWidth>
+        <InputLabel id="demo-simple-select-label">Rating</InputLabel>
         <Select
-                labelId="demo-simple-select-label"
-                id="demo-simple-select"
-                value={age}
-                label="Age"
-                onChange={handleChange}
+          labelId="demo-simple-select-label"
+          id="demo-simple-select"
+          value={rating}
+          label="Rating"
+          onChange={handleChange}
         >
-            <MenuItem value={10}>Ten</MenuItem>
-            <MenuItem value={20}>Twenty</MenuItem>
-            <MenuItem value={30}>Thirty</MenuItem>
+          <MenuItem value={'Excellent'}>Excellent</MenuItem>
+          <MenuItem value={'Good'}>Good</MenuItem>
+          <MenuItem value={'Bad'}>Bad</MenuItem>
         </Select>
-    </FormControl>
+      </FormControl>
+    </Box>
   );
-  }
+}

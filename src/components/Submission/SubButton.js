@@ -2,7 +2,7 @@ export default function SubButton() {
     // Your component logic here
     return (
       <div>
-        {/* Your JSX here */}
+        <Button variant="contained">Submit</Button>
       </div>
     );
   }

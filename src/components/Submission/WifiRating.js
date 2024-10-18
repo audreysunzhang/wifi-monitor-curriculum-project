@@ -1,8 +1,33 @@
+import * as React from 'react';
+import Box from '@mui/material/Box';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
+
 export default function WifiRating() {
-    // Your component logic here
-    return (
-      <div>
-        {/* Your JSX here */}
-      </div>
-    );
-  }
+  const [rating, setRating] = React.useState('');
+
+  const handleChange = (event) => {
+    setRating(event.target.value);
+  };
+
+  return (
+    <Box sx={{ minWidth: 120 }}>
+      <FormControl fullWidth>
+        <InputLabel id="demo-simple-select-label">Rating</InputLabel>
+        <Select
+          labelId="demo-simple-select-label"
+          id="demo-simple-select"
+          value={rating}
+          label="Rating"
+          onChange={handleChange}
+        >
+          <MenuItem value={'Excellent'}>Excellent</MenuItem>
+          <MenuItem value={'Good'}>Good</MenuItem>
+          <MenuItem value={'Bad'}>Bad</MenuItem>
+        </Select>
+      </FormControl>
+    </Box>
+  );
+}

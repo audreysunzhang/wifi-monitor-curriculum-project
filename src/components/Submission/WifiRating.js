@@ -5,11 +5,9 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
-export default function WifiRating() {
-  const [rating, setRating] = React.useState('');
-
+export default function WifiRating({ value, onChange }) {
   const handleChange = (event) => {
-    setRating(event.target.value);
+    onChange(event.target.value); // Pass the value back to the parent
   };
 
   return (
@@ -19,7 +17,7 @@ export default function WifiRating() {
         <Select
           labelId="demo-simple-select-label"
           id="demo-simple-select"
-          value={rating}
+          value={value}
           label="Rating"
           onChange={handleChange}
         >

@@ -5,11 +5,9 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
-export default function Location() {
-  const [loc, setLoc] = React.useState('');
-
+export default function Location({ value, onChange }) {
   const handleChange = (event) => {
-    setLoc(event.target.value);
+    onChange(event.target.value); 
   };
 
   return (
@@ -19,13 +17,15 @@ export default function Location() {
         <Select
           labelId="demo-simple-select-label"
           id="demo-simple-select"
-          value={loc}
+          value={value}
           label="Location"
           onChange={handleChange}
         >
           <MenuItem value={'East Asian Library'}>East Asian Library</MenuItem>
           <MenuItem value={'Doe Library'}>Doe Library</MenuItem>
-          <MenuItem value={'ASUC Student Union: Martin Luther King Jr. Building'}>ASUC Student Union: Martin Luther King Jr. Building</MenuItem>
+          <MenuItem value={'ASUC Student Union: Martin Luther King Jr. Building'}>
+            ASUC Student Union: Martin Luther King Jr. Building
+          </MenuItem>
         </Select>
       </FormControl>
     </Box>

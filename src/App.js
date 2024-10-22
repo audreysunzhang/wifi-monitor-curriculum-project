@@ -16,6 +16,7 @@ function App() {
         </div>
         <div className="Map-container">
           <Map />
+    
         </div>
       </div>
     </div>

@@ -21,7 +21,7 @@ export default function Map({ locations = [] }) {
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
       />
       {locations.map((loc, index) => (
-        <Marker key={index} position={[loc.lat, loc.lng]}>
+        <Marker key={index} position={[loc.latitude, loc.longitude]}>
           <Popup>{loc.locationName}: {loc.signal_strength}</Popup>
         </Marker>
       ))}

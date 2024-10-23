@@ -7,8 +7,8 @@ export default function Submission() {
   const [wifiRating, setWifiRating] = useState("");
   const [signalStrength, setSignalStrength] = useState("");
   const [selectedLocation, setSelectedLocation] = useState("");
-  const [selectedDate, setSelectedDate] = useState(null); // Track selected date
-  const [users, setUsers] = useState([]); // Store all users fetched from backend
+  const [selectedDate, setSelectedDate] = useState(null); 
+  const [users, setUsers] = useState([]);
 
   useEffect(() => {
     fetchUsers();

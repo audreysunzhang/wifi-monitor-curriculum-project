@@ -7,7 +7,7 @@ import Select from '@mui/material/Select';
 
 export default function WifiRating({ value, onChange }) {
   const handleChange = (event) => {
-    onChange(event.target.value); // Pass the value back to the parent
+    onChange(event.target.value);
   };
 
   return (

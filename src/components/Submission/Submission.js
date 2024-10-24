@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import WifiRating from "./WifiRating";
-import Location from "./Location"; 
-import Calendar from "./Calendar"; 
+import Location from "./Location";
+import Calendar from "./Calendar";
 
 export default function Submission() {
   const [wifiRating, setWifiRating] = useState("");
